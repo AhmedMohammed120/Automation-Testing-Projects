@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "9249be02-5915-48f5-9732-42c06c4c7c2c",
+		"name": "Bosta Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40445864"
+	},
+	"item": [
+		{
+			"name": "{{URL}}/shipments/track/{{TrackingNumber}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Assertion to check that the response status code is 200\r",
+							"pm.test(\"Response code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Assertion to ensure that the response time is less than 100ms\r",
+							"pm.test(\"Response time is less than 100ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "Landmark",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{URL}}/shipments/track/{{TrackingNumber}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"shipments",
+						"track",
+						"{{TrackingNumber}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
