@@ -1,0 +1,65 @@
+[
+  {
+    "Username": "standard_user",
+    "Password": "secret_sauce",
+    "Description": "Test Positive login scenario",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Passed"
+  },
+  {
+    "Username": "STANDARD_USER",
+    "Password": "secret_sauce",
+    "Description": "Username should not be case sensetive due to acceptance criteria",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Failed"
+  },
+  {
+    "Username": "  standard_user  ",
+    "Password": "secret_sauce",
+    "Description": "Username should handle spaces before and after username due to acceptance criteria",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Failed"
+  },
+  {
+    "Username": "standard_user",
+    "Password": "SECRET_SAUCE",
+    "Description": "Test Negative Login Scenario, check if Password is case sensetive",
+    "ExpectedURL": "www.saucedemo.com/",
+    "LastTestResult": "Passed"
+  },
+  {
+    "Username": "locked_out_user",
+    "Password": "secret_sauce",
+    "Description": "Test Negative login scenario, user should still at login page",
+    "ExpectedURL": "www.saucedemo.com",
+    "LastTestResult": "Passed"
+  },
+  {
+    "Username": "problem_user",
+    "Password": "secret_sauce",
+    "Description": "Test positive login scenario, with problems in products images",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Passed"
+  },
+  {
+    "Username": "performance_glitch_user",
+    "Password": "secret_sauce",
+    "Description": "Test positive login scenario, with more delay time during login",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Passed"
+  },
+  {
+    "Username": "error_user",
+    "Password": "secret_sauce",
+    "Description": "Test positive login scenario, with problems in add products",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Passed"
+  },
+  {
+    "Username": "visual_user",
+    "Password": "secret_sauce",
+    "Description": "Test positive login scenario, with problems in pricing",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Passed"
+  }
+]

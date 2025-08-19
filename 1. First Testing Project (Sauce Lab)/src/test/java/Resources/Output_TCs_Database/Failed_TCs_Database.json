@@ -1,0 +1,16 @@
+[
+  {
+    "Username": "STANDARD_USER",
+    "Password": "secret_sauce",
+    "Description": "Username should not be case sensetive due to acceptance criteria",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Failed"
+  },
+  {
+    "Username": "  standard_user  ",
+    "Password": "secret_sauce",
+    "Description": "Username should handle spaces before and after username due to acceptance criteria",
+    "ExpectedURL": "www.saucedemo.com/inventory.html",
+    "LastTestResult": "Failed"
+  }
+]
